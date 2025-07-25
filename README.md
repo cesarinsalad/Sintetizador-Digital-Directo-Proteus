@@ -3,7 +3,7 @@
 Este repositorio contiene el código fuente y el esquemático de simulación para un generador de funciones digital basado en el microcontrolador PIC18F4550. El sistema es capaz de generar cuatro tipos de formas de onda con frecuencia y amplitud ajustables, controladas a través de una interfaz de usuario en una pantalla GLCD de 128x64.
 
 (Sugerencia: Reemplaza esta URL con una captura de pantalla de tu propio circuito en Proteus)
----
+
 # 📋 Características
 
 **Microcontrolador**: PIC18F4550 funcionando a 48 MHz (a partir de un cristal de 20 MHz).
@@ -23,7 +23,7 @@ _Diente de Sierra (Pendiente Negativa):_ 30 Hz - 300 Hz | Vp 1.5V - 4.6V.
 **Interfaz de Usuario:** Pantalla gráfica GLCD de 128x64 píxeles y 4 pulsadores para la navegación por menús.
 
 **Técnica de Generación:** Síntesis Digital Directa (DDS) utilizando interrupciones del Timer1 para una generación precisa y en segundo plano.
----
+
 # ⚙️ Diseño del Hardware
 
 El circuito fue diseñado y simulado en Proteus 8 Professional. Los componentes clave incluyen:
@@ -39,7 +39,7 @@ El circuito fue diseñado y simulado en Proteus 8 Professional. Los componentes 
 - Pulsadores: Cuatro botones conectados a PORTA con resistencias de pull-up para la entrada del usuario.
 
 - Circuito de Reset: Una resistencia de pull-up de 10kΩ en el pin MCLR para garantizar un funcionamiento estable.
----
+
 # 💡 Arquitectura del Software
 
 El firmware fue desarrollado en C con el compilador CCS C. La arquitectura se basa en la separación de tareas críticas en tiempo y tareas de interfaz.
@@ -75,7 +75,7 @@ El programa sigue una secuencia de inicialización estricta:
 - Se utiliza una bandera ui_needs_update para que la pantalla solo se redibuje cuando hay un cambio, evitando el parpadeo y liberando ciclos de CPU.
 
 - Se implementó una lógica de validación de límites que ajusta automáticamente los parámetros al cambiar de tipo de onda, previniendo estados inválidos.
----
+  
 # 🚀 Cómo Usar
 
 ## Simulación:
@@ -102,8 +102,11 @@ El programa sigue una secuencia de inicialización estricta:
 
 (Aquí algunas capturas de pantalla de tu simulación, mostrando el menú en la LCD y las diferentes ondas en el osciloscopio.)
 
-## Menú Principal en la GLCD
+### Circuito en Funcionamiento
+![alt text](https://github.com/cesarinsalad/Sintetizador-Digital-Directo-Proteus/blob/main/Screenshot_1.png "Imágen del Circuito en Proteus")
 
-## Onda Senoidal en el Osciloscopio
+### Onda Senoidal en el Osciloscopio
+![alt text](https://github.com/cesarinsalad/Sintetizador-Digital-Directo-Proteus/blob/main/Screenshot_2.png "Imágen del Circuito en Proteus")
+
 ---
-Desarrollado como parte del curso de Sistemas Digitales.
+_Desarrollado como parte del curso de Sistemas Digitales de la Universidad de Margarita._
